@@ -43,10 +43,12 @@ public class KeyPadPressTest
     {
         // Press 1
 
-          kp.touch(1,1);
+        //  kp.touch(1,1);
         // Assertion (Replace with appropriate test)
-        String One= kp.getKey(1,1);
-        assertTrue( "1", One );
+        // kp.getKey(1,1);
+       // assertTrue( "1", kp.getKey(1,1));
+        kp.touch(1,1);
+        assertTrue( "Key Pressed: 1", kp.lastKey());
     }
 
    @Test
