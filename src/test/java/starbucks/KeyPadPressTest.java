@@ -47,7 +47,7 @@ public class KeyPadPressTest
         // Assertion (Replace with appropriate test)
         // kp.getKey(1,1);
        // assertTrue( "1", kp.getKey(1,1));
-        kp.touch(1,1);
+       // kp.touch(1,1);
         String s1= kp.lastKey();
         String s2= "1";
         boolean bol1= false;
