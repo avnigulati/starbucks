@@ -1,5 +1,3 @@
-
-
 package starbucks ;
 
 
@@ -17,6 +15,7 @@ import org.junit.Test;
 public class StrategyPatternTest
 {
     IApp app ;
+    KeyPad kp;
     
     /**
      * Default constructor for test class StrategyPatternTest
@@ -34,6 +33,7 @@ public class StrategyPatternTest
     public void setUp()
     {
         app = new AppAuthProxy() ;
+      //  kp =new KeyPad();
     }
 
 
@@ -41,24 +41,43 @@ public class StrategyPatternTest
     public void testLandscape()
     {
         // Login to App
-
-        // Put in Landscape Mode   
-
-        // Validate App is in Landscape Mode 
+            app.touch(1, 5);
+            app.touch(2, 5);
+            app.touch(3, 5);
+            app.touch(4, 5);
+        
+        app.display();
+        app.landscape();
+        app.execute("B");
+        System.out.println("Getname of current screen -- >");
+        System.out.println(app.screen());
+//          app.display()
+//        System.out.println("JSingh");
+        // Validate App is in Landscape Mode
+//        app.screen()
         // (replace with correct assert)
-        assertTrue( false ) ;     
+        assertEquals("MyCards", app.screen());    
     }
 
     @Test
     public void testPortrait()
     {
         // Login to App
-
+            app.touch(1, 5);
+            app.touch(2, 5);
+            app.touch(3, 5);
+            app.touch(4, 5);
         // Put in Portrait Mode   
+            app.display();
+            System.out.println(app.screen());
+        // Put in Landscape Mode   
+        app.execute("B");
+        System.out.println("Getname of current screen");
+        System.out.println(app.screen());
 
         // Validate App is in Landscape Mode 
         // (replace with correct assert)
-        assertTrue( false ) ;       
+        assertEquals("Payments", app.screen());       
     }
 
     
