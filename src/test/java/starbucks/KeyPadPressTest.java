@@ -50,8 +50,9 @@ public class KeyPadPressTest
         kp.touch(1,1);
         String s1= kp.lastKey();
         String s2= "1";
+        boolean bol1= False;
         if (s1.equals(s2))
-        { boolean bol1= True;}
+        { bol1= True;}
         
         assertTrue( bol1);
     }
